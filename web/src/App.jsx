@@ -94,7 +94,7 @@ function App() {
     do
     {
       i++;
-      const { data } = await agent.getFollows({ actor: startFollowingAccount, limit: 100, cursor });
+      const { data } = await agent.getFollowers({ actor: startFollowingAccount, limit: 100, cursor });
       console.log(data, `${i}/${max}`);
       if( followed.length < 1 && data.subject ) followed.push(data.subject);
 
